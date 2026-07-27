@@ -1,0 +1,29 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of /.well-known/* on Grow Therapy hosts
+host: https://growtherapy.com
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+other_hosts:
+- host: https://provider.growtherapy.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 302
+    note: redirects to provider login; no public document served
+  - path: /.well-known/openid-configuration
+    status: 302
+    note: redirects to provider login; no public document served
+notes: >-
+  No public /.well-known discovery documents are served. All probes on the
+  primary host returned 404; the authenticated provider host redirects to
+  login. Recorded as valid negative results (no artifact saved verbatim, no
+  WellKnown pointer wired since nothing returned 200).

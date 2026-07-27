@@ -1,8 +1,31 @@
 aid: grow-therapy
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/grow-therapy.png
 name: Grow Therapy
-description: Grow Therapy is a company surfaced as a portfolio company of menlo-ventures and added to
-  the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Grow Therapy is a mental-health platform that connects individuals with
+  licensed therapists and prescribers, offering virtual and in-person talk
+  therapy plus medication management in one insurance-integrated experience.
+  The company operates a two-sided marketplace: a client-facing product for
+  finding, booking, and paying for care (with insurance verification and an
+  average session cost around $21 for covered clients) and a provider portal
+  that gives clinicians scheduling, billing, telehealth, and practice-management
+  tooling. Grow also partners with employers, physicians, and payors on B2B
+  mental-health access. It was surfaced as a portfolio company of Menlo Ventures
+  and added to the API Evangelist network; Grow Therapy publishes a public
+  Statuspage but does not expose a public developer API, so this profile
+  captures its company identity, operational transparency, and domain-security
+  posture rather than API artifacts.
 url: https://raw.githubusercontent.com/api-evangelist/grow-therapy/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,9 +35,17 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Mental Health
+- Telehealth
+- Healthcare
+- Therapy
+- Medication Management
+- Insurance
+- Marketplace
+- Behavioral Health
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -24,3 +55,28 @@ maintainers:
 common:
 - type: Website
   url: https://growtherapy.com
+- type: AboutUs
+  url: https://growtherapy.com/about-us/
+- type: Blog
+  url: https://growtherapy.com/blog/
+- type: HelpCenter
+  url: https://help.growtherapy.com/clients/en/
+- type: Support
+  url: https://growtherapy.jotform.com/grow-support/contact-us
+- type: Login
+  url: https://provider.growtherapy.com/login
+- type: TermsOfService
+  url: https://growtherapy.com/legal/terms-of-service/
+- type: PrivacyPolicy
+  url: https://growtherapy.com/legal/privacy-policies/
+- type: StatusPage
+  url: https://status.growtherapy.com
+- type: Lifecycle
+  url: lifecycle/grow-therapy-lifecycle.yml
+- type: DomainSecurity
+  url: security/grow-therapy-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

@@ -1,0 +1,23 @@
+generated: '2026-07-19'
+method: searched
+source: https://status.growtherapy.com
+status_page: https://status.growtherapy.com
+status_page_platform: Atlassian Statuspage
+status_components:
+- Provider Portal
+- Marketplace
+- Scheduling
+- Billing
+- Telehealth
+- Client Portal
+- Third Party Dependencies
+versioning: null
+deprecation: null
+sla: null
+deprecated_operations: []
+notes: >-
+  Grow Therapy publishes an Atlassian-hosted operational status page covering
+  its provider portal, marketplace, scheduling, billing, telehealth, and client
+  portal. No public developer API, versioning policy, or deprecation policy is
+  published (this is a B2C/B2B telehealth platform, not an API product), so
+  those fields are recorded as absent rather than fabricated.
