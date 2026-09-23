@@ -2,17 +2,6 @@ generated: '2026-07-19'
 method: searched
 source: live probes of /.well-known/* on Grow Therapy hosts
 host: https://growtherapy.com
-documents:
-- path: /.well-known/security.txt
-  status: 404
-- path: /.well-known/openid-configuration
-  status: 404
-- path: /.well-known/oauth-authorization-server
-  status: 404
-- path: /.well-known/api-catalog
-  status: 404
-- path: /.well-known/ai-plugin.json
-  status: 404
 other_hosts:
 - host: https://provider.growtherapy.com
   documents:
@@ -22,8 +11,24 @@ other_hosts:
   - path: /.well-known/openid-configuration
     status: 302
     note: redirects to provider login; no public document served
-notes: >-
-  No public /.well-known discovery documents are served. All probes on the
-  primary host returned 404; the authenticated provider host redirects to
-  login. Recorded as valid negative results (no artifact saved verbatim, no
-  WellKnown pointer wired since nothing returned 200).
+notes: No public /.well-known discovery documents are served. All probes on the primary host returned
+  404; the authenticated provider host redirects to login. Recorded as valid negative results (no artifact
+  saved verbatim, no WellKnown pointer wired since nothing returned 200).
+hosts:
+- host: https://growtherapy.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
